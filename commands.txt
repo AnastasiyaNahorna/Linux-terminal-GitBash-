@@ -1,0 +1,174 @@
+# Check your current location
+pwd
+
+# Create a folder
+mkdir folder_name
+
+# Enter a folder
+cd folder_name
+
+# Create 3 folders
+mkdir folder1 folder2 folder3
+
+# Enter any folder
+cd folder_name
+
+# Create 5 files (3 txt, 2 json)
+touch file1.txt file2.txt file3.txt file4.json file5.json
+
+# Create 3 folders
+mkdir folder4 folder5 folder6
+
+# List the contents of a folder
+ls
+
+# Open any txt file
+nano file1.txt
+
+# Write something in the file
+# (Inside the nano editor, type your text.)
+
+# Save and exit
+# (In the nano editor, press Ctrl + O to save, then press Ctrl + X to exit.)
+
+# Go back one level
+cd ..
+
+# Move any 2 files to another folder
+mv file1.txt file2.txt destination_folder/
+
+# Copy any 2 files to another folder
+cp file3.txt file4.json destination_folder/
+
+# Find a file by name
+find -name filename.txt
+
+# View real-time content using 'grep'
+tail -f filename.txt | grep search_term
+
+# Display the first few lines of a text file
+head -n 5 filename.txt
+
+# Display the last few lines of a text file
+tail -n 5 filename.txt
+
+# View content of a long file using 'less'
+less long_filename.txt
+
+# Display date and time
+date
+
+# Create a folder named dir_1
+mkdir dir_1
+
+# Go into the folder named dir_1
+cd dir_1
+
+# Create a folder named inner_dir_1
+mkdir inner_dir_1
+
+# Check your current location
+pwd
+
+# While in the dir_1 folder, create an empty text file named tf_1.txt
+touch tf_1.txt
+
+# While in the dir_1 folder, create a text file named tf_2.txt using the cat command with the provided lines
+cat > tf_2.txt <<EOF
+- the first 1
+- the second 2
+- the third 3
+EOF
+
+# Go into the inner_dir_1 folder
+cd inner_dir_1
+
+# Create a text file named tf_3.txt using the cat command and add any content you want
+cat > tf_3.txt
+
+# Add the line "the second 2" to the tf_3.txt file using the cat command
+cat >> tf_3.txt <<EOF the second 2 EOF
+
+# Add the line "the sec 2" to the tf_3.txt file using the cat command
+cat >> tf_3.txt <<EOF the sec 2 EOF
+
+# Add the line "the sec 3" to the tf_2.txt file using the cat command
+cat >> tf_2.txt <<EOF the sec 3 EOF
+
+# Add the line "the SeCoNd 2" to the tf_3.txt file using the cat command
+cat >> tf_3.txt <<EOF the SeCoNd 2 EOF
+
+# Add the line "the seConD 2" to the tf_2.txt file using the cat command
+cat >> tf_2.txt <<EOF the seConD 2 EOF
+
+# Create a text file named tf_4.txt with 15 empty lines
+printf "\\n" >> tf_4.txt
+
+# Create a text file named tF_5.txt with 13 empty lines
+printf "\\n" >> tF_5.txt
+
+# List all files in the current directory
+ls
+
+# Go back to the parent directory
+cd ..
+
+# Display the contents of the tf_3.txt file in the terminal
+cat tf_3.txt
+
+# Find the path to the tf_4.txt file
+find -name tf_4.txt
+
+# Empty the contents of the tf_4.txt file without deleting the file itself
+> tf_4.txt
+
+# Find the paths of files with "tf" in their names
+find -name "*tf*"
+
+# Find the paths of files with "tf" in their names, ignoring case
+find -iname "*tf*"
+
+# Search for lines containing the letters "sec" in files in the current directory
+grep "sec" *
+
+# Search for lines containing the letters "sec" in files in the current directory, ignoring case
+grep -i "sec" *
+
+# Search for lines containing only the letters "sec" in files in the current directory
+grep -w "sec" *
+
+# Search for lines containing only the letters "sec" in files in the current directory, ignoring case
+grep -wi "sec" *
+
+# Search for lines containing the word "second" in files in the current directory
+grep "second" *
+
+# Search for lines containing the word "second" in files in the current directory, ignoring case
+grep -i "second" *
+
+# Search for lines containing the word "second" in files in all subdirectories
+grep -r "second" *
+
+# Display only the paths and filenames of files with "second" in the current directory
+grep -r -l "second" *
+
+# Search for all lines in all files that do not contain "second"
+grep -L "second" *
+
+# Display only the paths and filenames of files that do not contain "second"
+grep -L "second" * | awk -F/ '{print $NF}'
+
+# Display the last 4 lines of a text file
+tail -n 4 filename.txt
+
+# Display the first 4 lines of a text file
+head -n 4 filename.txt
+
+# Create a new folder and a new text file with content in one line
+mkdir new_folder && echo "Some content" > new_folder/new_file.txt
+
+# Move text files with "sec" in their contents to another folder in one line
+mv $(grep -rl "sec" *) destination_folder/
+
+# Copy text files with "sec" in their contents to another folder in one line
+cp $(grep -rl "sec" *) destination_folder/
